@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leave Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="form-container">
+
+    <h1>Leave Management System</h1>
+
+    <form action="/submit_leave" method="POST">
+
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <label>Employee ID</label>
+        <input type="text" name="employee_id" required>
+
+        <label>Leave Type</label>
+        <input type="text" name="leave_type" required>
+
+        <label>From Date</label>
+        <input type="date" name="from_date" required>
+
+        <label>To Date</label>
+        <input type="date" name="to_date" required>
+
+        <button type="submit">Submit Leave</button>
+
+    </form>
+
+    <div class="button-group">
+
+        <a href="/view_leaves">
+            <button type="button" class="view-btn">
+                View Leaves
+            </button>
+        
+
+    </div>
+
+</div>
+
+</body>
+</html>
